@@ -24,7 +24,7 @@ function getBooks() {
   console.log('Getting books...');
   $.ajax({
     method: 'GET',
-    url: '/book'
+    url: '/book/book'
   }).then( function(response) {
     renderBooks( response );
   }).catch( function(error) {
@@ -79,7 +79,7 @@ function addBook() {
   
   $.ajax({
     method: 'POST',
-    url: '/book',
+    url: '/book/book',
     data: newBook
   }).then( function(response) {
     console.log('Book added');
